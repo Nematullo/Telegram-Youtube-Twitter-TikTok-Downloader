@@ -139,3 +139,4 @@ docker run -it --rm \
   -e TEMP_DOWNLOAD_FOLDER=/tmp/teledown \
   -v "$(pwd)/downloads":/tmp/teledown \
   teledown-bot
+
