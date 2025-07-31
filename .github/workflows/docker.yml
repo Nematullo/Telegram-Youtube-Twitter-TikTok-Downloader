@@ -23,21 +23,21 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/telegram-bot:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tiktok-downloader-tg-bot:latest
 
       - name: Clean old container and image
         run: |
-          docker stop telegram-bot || true
-          docker rm telegram-bot || true
+          docker stop tiktok-downloader-tg-bot || true
+          docker rm tiktok-downloader-tg-bot || true
           docker image prune -f
 
       - name: Pull latest image
-        run: docker pull ${{ secrets.DOCKERHUB_USERNAME }}/telegram-bot:latest
+        run: docker pull ${{ secrets.DOCKERHUB_USERNAME }}/tiktok-downloader-tg-bot:latest
 
       - name: Run new container
         run: |
           docker run -d \
-            --name telegram-bot \
+            --name tiktok-downloader-tg-bot \
             -e TELEGRAM_API_TOKEN=${{ secrets.TELEGRAM_API_TOKEN }} \
             -p 2001:8080 \
-            ${{ secrets.DOCKERHUB_USERNAME }}/telegram-bot:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/tiktok-downloader-tg-bot:latest
