@@ -127,3 +127,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 📞 Support
 - Open an [issue](../../issues) to report bugs
 ---
+
+
+docker run
+
+
+docker build -t teledown-bot .
+
+docker run -it --rm \
+  -e API_TOKEN=123456789:ABC-YOUR-TOKEN-HERE \
+  -e TEMP_DOWNLOAD_FOLDER=/tmp/teledown \
+  -v "$(pwd)/downloads":/tmp/teledown \
+  teledown-bot

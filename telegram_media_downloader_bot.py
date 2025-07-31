@@ -7,10 +7,10 @@ from telegram.ext import ApplicationBuilder, CommandHandler, CallbackContext
 from telegram.error import TelegramError
 
 # API Token for the bot (obtained from @BotFather)
-API_TOKEN = 'YOUR-API-TOKEN'
+API_TOKEN =  os.getenv("API_TOKEN")
 
 # Temporary download path
-TEMP_DOWNLOAD_FOLDER = r'C:\Users\'
+TEMP_DOWNLOAD_FOLDER = os.getenv("TEMP_DOWNLOAD_FOLDER", "/tmp")
 
 # Telegram size limit (50 MB)
 TELEGRAM_MAX_SIZE_MB = 50
