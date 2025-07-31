@@ -39,5 +39,5 @@ jobs:
           docker run -d \
             --name telegram-bot \
             -e TELEGRAM_API_TOKEN=${{ secrets.TELEGRAM_API_TOKEN }} \
-            -p 8080:8080 \
+            -p 2001:8080 \
             ${{ secrets.DOCKERHUB_USERNAME }}/telegram-bot:latest
