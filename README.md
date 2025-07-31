@@ -1,3 +1,10 @@
+🧾 Acknowledgement / Благодарность
+This project is a fork of the original repository by @vgvr0, available at:
+👉 vgvr0/Telegram-Youtube-Twitter-TikTok-Downloader
+
+Этот проект является форком оригинального репозитория от @vgvr0, доступного по ссылке:
+👉 vgvr0/Telegram-Youtube-Twitter-TikTok-Downloader
+
 ### Telegram Media Downloader (Youtube, Twitter and TikTok):
 ![Telegram Media Downloader Cover](images/Twitter_Youtube_TikTok_Telegram.webp)
 **Telegram Media Downloader** is a Python-based bot designed to download videos and audios from platforms like YouTube, Twitter/X, and TikTok. If the file exceeds Telegram's 50 MB limit, it automatically compresses the file using `ffmpeg` and sends it to the user. This bot allows easy downloading and conversion of media through simple commands.
