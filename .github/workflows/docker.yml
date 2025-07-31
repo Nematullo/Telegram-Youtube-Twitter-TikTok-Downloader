@@ -39,5 +39,6 @@ jobs:
           docker run -d \
             --name tiktok-downloader-tg-bot \
             -e TELEGRAM_API_TOKEN=${{ secrets.TELEGRAM_API_TOKEN }} \
+            -e TEMP_DOWNLOAD_FOLDER=/tmp \
             -p 2001:8080 \
             ${{ secrets.DOCKERHUB_USERNAME }}/tiktok-downloader-tg-bot:latest
