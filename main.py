@@ -5,6 +5,9 @@ import asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackContext
 from telegram.error import TelegramError
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # API Token for the bot (obtained from @BotFather)
 API_TOKEN =  os.getenv("API_TOKEN")
